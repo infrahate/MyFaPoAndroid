@@ -1,5 +1,7 @@
 package com.example.plamen.myfapo.View;
 
+import android.content.Context;
+
 import com.example.plamen.myfapo.Data.SnapItem;
 
 import java.util.ArrayList;
@@ -12,4 +14,5 @@ import java.util.List;
 public interface ViewInterface {
     void startDetailActivity(String dateAndTime, String message, int colorResource, String picture_link, ArrayList<String> comments, String posterName);
     void setUpAdapterAndView(List<SnapItem> listOfData);
+    void startTakeSnapActivity(Context context);
 }

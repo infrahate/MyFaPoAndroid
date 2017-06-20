@@ -1,5 +1,6 @@
 package com.example.plamen.myfapo.View;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -56,6 +57,13 @@ public class MainActivity extends AppCompatActivity implements ViewInterface {
 
         takeSnap = (Button) findViewById(R.id.snap_take);
 
+        takeSnap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startTakeSnapActivity(getApplicationContext());
+            }
+        });
+
     }
 
     @Override
@@ -76,6 +84,12 @@ public class MainActivity extends AppCompatActivity implements ViewInterface {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new CustomAdapter();
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void startTakeSnapActivity(Context context) {
+        Intent i = new Intent(this,SnapActivity.class);
+        startActivity(i);
     }
 
     private class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder>{

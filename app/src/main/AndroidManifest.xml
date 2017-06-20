@@ -22,7 +22,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".View.DetailActivity"></activity>
+            android:name=".View.DetailActivity">
+        </activity>
+        <activity
+            android:name=".View.SnapActivity">
+        </activity>
     </application>
 
 </manifest>
