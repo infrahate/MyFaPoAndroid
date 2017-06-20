@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root_list_item"
+    >
+
+    <TextView
+        android:id="@+id/lbl_item_description"
+        style="@style/Text.Primery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:visibility="visible"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_date_and_time_header"
+        tools:text="2:23am 09/08/2515" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#eeeeee"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_snap_item_postername" />
+
+    <ImageView
+        android:id="@+id/imv_list_item_circle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_snap_item_postername" />
+
+    <TextView
+        android:id="@+id/lbl_date_and_time_header"
+        style="@style/Text.Secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:visibility="visible"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_snap_item_share"
+        tools:text="2:23am 09/08/2515"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/lbl_snap_item_postername"
+        style="@style/Text.Primery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Check out content like fragmented podcast to expose yourself to the knolege opinions and exprestsjfksdjgksjdlk jdslgj lsdkjg lksdjg lsdjg ksdj jsldkg"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="0dp"
+        android:background="#ffffff"
+        android:padding="16dp"
+        android:layout_marginLeft="40dp" />
+
+    <ListView
+        style="@style/ListView"
+        android:id="@+id/lbl_snap_comments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_item_description"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/button_snap_item_like"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/heart"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/imv_list_item_circle"
+        android:layout_marginStart="8dp" />
+
+    <ImageView
+        android:id="@+id/button_snap_item_comment"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/speach"
+        app:layout_constraintLeft_toRightOf="@+id/button_snap_item_like"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/imv_list_item_circle"
+        android:layout_marginStart="8dp" />
+
+    <ImageView
+        android:id="@+id/button_snap_item_share"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/button_snap_item_comment"
+        app:layout_constraintTop_toBottomOf="@+id/imv_list_item_circle"
+        app:srcCompat="@drawable/plane" />
+
+
+</android.support.constraint.ConstraintLayout>

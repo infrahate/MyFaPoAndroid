@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_main_activity"
+    tools:context="com.example.plamen.myfapo.View.MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_main_activity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginBottom="48dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/snap_take"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@android:drawable/ic_menu_camera"
+            android:elevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="0.55"
+            app:srcCompat="@drawable/logo2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation_bottom_main_container"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/rec_main_activity"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/navigation_bottom_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="?attr/homeAsUpIndicator" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
