@@ -25,6 +25,9 @@ import java.util.ArrayList;
 
 public class Controller {
 
+    //TO-DO: Figure out how to move volley requests to data section. Callbacks maybe?
+    //TO-DO: Make a class that deals with providing objects the correct links. Further abstraction for making integration of load-balancing easier in the future.
+
     private ViewInterface view;
     private DataSourceInterface dataSource;
     private Context context;
@@ -80,4 +83,5 @@ public class Controller {
     public void onListItemClick(SnapItem testItem) {
         view.startDetailActivity(testItem.getDateAndTime(),testItem.getMessage(),testItem.getColorRes(),testItem.getPicture_link(),testItem.getComments(),testItem.getPosterName());
     }
+
 }

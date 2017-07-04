@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/root_main_activity"
-    tools:context="com.example.plamen.myfapo.View.MainActivity">
+    tools:context="com.example.plamen.myfapo.View.MainActivity"
+    android:background="#fff"
+    >
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rec_main_activity"
@@ -18,7 +20,11 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        android:layout_marginBottom="48dp">
+        android:layout_marginBottom="36dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1">
 
     </android.support.v7.widget.RecyclerView>
 
@@ -27,8 +33,9 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#cccccc"
-        tools:layout_editor_absoluteX="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -39,7 +46,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:weightSum="1">
+        android:weightSum="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1">
 
         <Button
             android:id="@+id/snap_take"
@@ -67,12 +76,11 @@
         android:layout_height="48dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/rec_main_activity"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="0dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:weightSum="1">
+        android:weightSum="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1">
 
         <ImageButton
             android:id="@+id/navigation_bottom_home"
