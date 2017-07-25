@@ -3,5 +3,9 @@
     style="@style/ListView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:ellipsize="end"
     android:fontFamily="sans-serif-light"
-    android:textAlignment="center" />
+    android:maxLines="1"
+    android:padding="5dp"
+    android:textAlignment="viewStart"
+    android:textSize="12sp" />

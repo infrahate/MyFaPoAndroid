@@ -1,6 +1,7 @@
 package com.example.plamen.myfapo.View;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -58,7 +59,11 @@ public class DetailActivity extends AppCompatActivity {
         message.setText(messageExtra);
 
         coloredBackground = (ImageView) findViewById(R.id.cont_snap_image);
-        Picasso.with(getApplicationContext()).load(picture_link).into(coloredBackground);
+        if(picture_link !=null) {
+            Picasso.with(getApplicationContext()).load(picture_link).into(coloredBackground);
+        }else{
+            coloredBackground.setImageResource(R.mipmap.placeholder);
+        }
 
         posterNameView = (TextView) findViewById(R.id.lbl_poster_name);
         posterNameView.setText(posterName);

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import com.example.plamen.myfapo.Data.DataSource;
 import com.example.plamen.myfapo.Data.SnapItem;
 import com.example.plamen.myfapo.HelperTools;
 import com.example.plamen.myfapo.Logic.Controller;
+import com.example.plamen.myfapo.Logic.NavigationController;
 import com.example.plamen.myfapo.R;
 import com.squareup.picasso.Picasso;
 
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements ViewInterface {
     private Controller controller;
 
     Button takeSnap;
+    ImageButton profile;
+    ImageButton notifications;
+
 
 
     @Override
@@ -50,19 +55,37 @@ public class MainActivity extends AppCompatActivity implements ViewInterface {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final NavigationController navigationController = new NavigationController(this);
+
         recyclerView = (RecyclerView) findViewById(R.id.rec_main_activity);
         layoutInflater = getLayoutInflater();
 
         controller = new Controller(this,new DataSource(),getApplicationContext());
 
         takeSnap = (Button) findViewById(R.id.snap_take);
-
         takeSnap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startTakeSnapActivity(getApplicationContext());
             }
         });
+
+        profile = (ImageButton) findViewById(R.id.navigation_bottom_profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               navigationController.startProfileActivity();
+            }
+        });
+
+        notifications = (ImageButton) findViewById(R.id.navigation_bottom_notifications);
+        notifications.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navigationController.startNotificationActivity();
+            }
+        });
+
 
     }
 

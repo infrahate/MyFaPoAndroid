@@ -19,4 +19,5 @@ public class DataSource implements DataSourceInterface {
     public List<SnapItem> getListOfData(Context context) {
         return null;
     }
+
 }
