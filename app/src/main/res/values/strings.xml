@@ -2,4 +2,8 @@
     <string name="app_name">MyFaPo</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="title_activity_notifications_acticity">NotificationsActicity</string>
+    <string name="facebook_app_id">469269316754433</string>
+    <string name="fb_login_protocol_scheme">fb469269316754433</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">LdN33qgJkrMKRdhqZFU0sIb1N</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">Yx1KgWwt3dp4Sw3dTcoiovR9jCMxVFAZRKwP09SElZLMqC0iVz</string>
 </resources>

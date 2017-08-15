@@ -9,11 +9,13 @@
     <ImageView
         android:id="@+id/dbl_top_logo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        app:srcCompat="@drawable/logo2" />
+        app:srcCompat="@drawable/logo2"
+        android:background="@color/tw__solid_white"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -77,12 +79,13 @@
                 android:layout_below="@+id/lbl_message_body" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/detail_activity_comment_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Enter Comment"
-                android:inputType="textPersonName" />
+                android:inputType="text"
+                android:imeOptions="actionSend" />
 
         </LinearLayout>
     </ScrollView>
